@@ -4,9 +4,11 @@ import {useCryptoStore} from "./store"
 
 export default function App() {
 	const fetchCryptos = useCryptoStore(state => state.fetchCryptos)
+	
 	useEffect(() => {
 		fetchCryptos()
 	}, [])
+
 	return (
 		<div className="container">
 			<h1 className="app-title">
