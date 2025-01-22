@@ -1,3 +1,4 @@
+import {currencies} from "../data"
 export default function CryptoSearchForm() {
     return (
         <form className="form">
@@ -12,12 +13,18 @@ export default function CryptoSearchForm() {
             </div>
 
             <div className="field">
-                <label htmlFor="criptocurrency">Criptomoneda:</label>
+                <label htmlFor="cryptocurrency">Criptomoneda:</label>
                 <select 
-                    name="criptocurrency" 
-                    id="criptocurrency"
+                    name="cryptocurrency" 
+                    id="cryptocurrency"
                 >
                     <option value="">-- Seleccione --</option>
+                    {currencies.map(currency => (
+                        <option 
+                            key={currency.code}
+                            value={currency.code}
+                        >{currency.name}</option>
+                    ))}
                 </select>
             </div>
 
