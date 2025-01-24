@@ -89,3 +89,30 @@ body {
     text-transform: uppercase;
     font-size: 1.6rem;
 }
+
+.result-wrapper {
+    margin-top: 5rem;
+    h2 {
+        text-align: center;
+    }
+}
+
+.result {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+    gap: 1rem;
+
+    img {
+        width: 100%;
+    }
+    p {
+        margin: 0 0 1rem;
+        font-size: 1.6rem;
+    }
+    
+    span {
+        font-weight: 700;
+    }
+}
+
